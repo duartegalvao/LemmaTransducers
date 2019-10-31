@@ -1,0 +1,6 @@
+0	1	a	a
+1	2	r	s
+2	3	+V	eps
+3	4	+ip	eps
+4	5	+2s eps
+5
