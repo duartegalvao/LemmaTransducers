@@ -1,6 +1,6 @@
 0	1	a	o
 1	2	r	eps
 2	3	+V	eps
-3	4	+if	eps
+3	4	+ip	eps
 4	5	+1s eps
 5
