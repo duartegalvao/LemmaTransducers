@@ -1,3 +1,4 @@
-0	1	+N	s
-1	2	+ms	eps
-2
+0   1   o   o
+1	2	+N	s
+2	3	+ms	eps
+3
