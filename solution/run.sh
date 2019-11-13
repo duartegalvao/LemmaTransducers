@@ -61,7 +61,20 @@ fstdraw    --isymbols=syms.txt --osymbols=syms.txt --portrait word2lemma.fst | d
 
 # d.
 # Test transducers
-# TODO
+cd examples
+source run.sh
+
+fstcompose objecto.fst ../word2lemma.fst | fstarcsort > objecto_word2lemma.fst
+fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait objecto_word2lemma.fst  |  dot -Tpdf  > objecto_word2lemma.pdf
+fstcompose acabar.fst ../word2lemma.fst | fstarcsort > acabar_word2lemma.fst
+fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait acabar_word2lemma.fst  |  dot -Tpdf  > acabar_word2lemma.pdf
+fstcompose obviamente.fst ../word2lemma.fst | fstarcsort > obviamente_word2lemma.fst
+fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait obviamente_word2lemma.fst  |  dot -Tpdf  > obviamente_word2lemma.pdf
+
+cd ..
+#fstcompose objecto.fst lemma2verb.fst | fstarcsort > objecto_lemma2verb.fst
+#fstcompose acabar.fst lemma2verb.fst | fstarcsort > acabar_lemma2verb.fst
+#fstcompose obviamente.fst lemma2verb.fst | fstarcsort > obviamente_lemma2verb.fst
 
 # Final deliver
 mkdir -p FINALtransducers
