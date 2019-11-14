@@ -64,17 +64,38 @@ fstdraw    --isymbols=syms.txt --osymbols=syms.txt --portrait word2lemma.fst | d
 cd examples
 source run.sh
 
-fstcompose objecto.fst ../word2lemma.fst | fstarcsort > objecto_word2lemma.fst
-fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait objecto_word2lemma.fst  |  dot -Tpdf  > objecto_word2lemma.pdf
-fstcompose acabar.fst ../word2lemma.fst | fstarcsort > acabar_word2lemma.fst
-fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait acabar_word2lemma.fst  |  dot -Tpdf  > acabar_word2lemma.pdf
-fstcompose obviamente.fst ../word2lemma.fst | fstarcsort > obviamente_word2lemma.fst
-fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait obviamente_word2lemma.fst  |  dot -Tpdf  > obviamente_word2lemma.pdf
+
+fstcompose objecto.fst ../word2lemma.fst > objecto_word2lemma.fst
+fstcompose acabar.fst ../word2lemma.fst > acabar_word2lemma.fst
+fstcompose obviamente.fst ../word2lemma.fst > obviamente_word2lemma.fst
+
+fstcompose objecto.fst ../lemma2verb.fst > objecto_lemma2verb.fst
+fstcompose acabar.fst ../lemma2verb.fst > acabar_lemma2verb.fst
+fstcompose obviamente.fst ../lemma2verb.fst > obviamente_lemma2verb.fst
+
+fstcompose objecto.fst ../lemma2word.fst > objecto_lemma2word.fst
+fstcompose acabar.fst ../lemma2word.fst > acabar_lemma2word.fst
+fstcompose obviamente.fst ../lemma2word.fst > obviamente_lemma2word.fst
+
+
 
 cd ..
-#fstcompose objecto.fst lemma2verb.fst | fstarcsort > objecto_lemma2verb.fst
-#fstcompose acabar.fst lemma2verb.fst | fstarcsort > acabar_lemma2verb.fst
-#fstcompose obviamente.fst lemma2verb.fst | fstarcsort > obviamente_lemma2verb.fst
+
+cd examplespdf
+
+fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait ../examples/objecto_word2lemma.fst  |  dot -Tpdf  > objecto_word2lemma.pdf
+fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait ../examples/obviamente_word2lemma.fst  |  dot -Tpdf  > obviamente_word2lemma.pdf
+fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait ../examples/acabar_word2lemma.fst  |  dot -Tpdf  > acabar_word2lemma.pdf
+
+fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait ../examples/obviamente_lemma2verb.fst  |  dot -Tpdf  > obviamente_lemma2verb.pdf
+fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait ../examples/acabar_lemma2verb.fst  |  dot -Tpdf  > acabar_lemma2verb.pdf
+fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait ../examples/objecto_lemma2verb.fst  |  dot -Tpdf  > objecto_lemma2verb.pdf
+
+fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait ../examples/obviamente_lemma2word.fst  |  dot -Tpdf  > obviamente_lemma2word.pdf
+fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait ../examples/acabar_lemma2word.fst  |  dot -Tpdf  > acabar_lemma2word.pdf
+fstdraw --isymbols=../syms.txt --osymbols=../syms.txt --portrait ../examples/objecto_lemma2word.fst  |  dot -Tpdf  > objecto_lemma2word.pdf
+
+cd ..
 
 # Final deliver
 mkdir -p FINALtransducers
