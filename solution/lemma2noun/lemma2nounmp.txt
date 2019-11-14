@@ -1,4 +1,4 @@
 0   1   o   o
 1	2	+N	s
-2	3	+ms	eps
+2	3	+mp	eps
 3
