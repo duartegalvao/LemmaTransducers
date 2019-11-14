@@ -65,13 +65,11 @@ cd examples
 source run.sh
 
 
-fstcompose objecto.fst ../word2lemma.fst > objecto_word2lemma.fst
-fstcompose acabar.fst ../word2lemma.fst > acabar_word2lemma.fst
-fstcompose obviamente.fst ../word2lemma.fst > obviamente_word2lemma.fst
+fstcompose objecto_lemma.fst ../word2lemma.fst > objecto_word2lemma.fst
+fstcompose acabar_lemma.fst ../word2lemma.fst > acabar_word2lemma.fst
+fstcompose obviamente_lemma.fst ../word2lemma.fst > obviamente_word2lemma.fst
 
-fstcompose objecto.fst ../lemma2verb.fst > objecto_lemma2verb.fst
 fstcompose acabar.fst ../lemma2verb.fst > acabar_lemma2verb.fst
-fstcompose obviamente.fst ../lemma2verb.fst > obviamente_lemma2verb.fst
 
 fstcompose objecto.fst ../lemma2word.fst > objecto_lemma2word.fst
 fstcompose acabar.fst ../lemma2word.fst > acabar_lemma2word.fst
